@@ -2,4 +2,4 @@ tatooine
 ========
 #hlthapp
 
-###revamping the project with modern tooling
+revamping the project with modern tooling
