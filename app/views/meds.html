@@ -1,0 +1,33 @@
+<div class="hero-unit">
+	<h1>Medications</h1>
+	<h3>Track all your medications.</h3>
+</div>
+
+<form ng-submit="addMed()">
+	<input type="text" ng-model="newMed"  size="30" placeholder="add new med here">
+ 	<input class="btn" type="submit" value="add">
+</form>
+
+<ul class="unstyled">
+	<li ng-repeat="med in medNames">	
+		<h3 class="label">{{ med }}</h3>
+	</li>
+</ul>
+
+<br>
+
+<table class="table">
+  <h4>Medication List</h4>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="med in medNames">
+      <td>{{ med }}</td>     
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-large" href="#/">goto Home</a>
