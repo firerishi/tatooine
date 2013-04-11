@@ -1,1 +1,19 @@
 @import "compass_twitter_bootstrap";
+
+tr {
+	.edit {
+		display: none;
+	}
+	view {
+		display: normal;
+	}
+}
+
+tr.editing {
+	.edit {
+		display:inline-table;
+	}
+	.view {
+		display:none;
+	}	
+}

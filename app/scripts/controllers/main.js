@@ -3,10 +3,9 @@
 angular.module('tatooineApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-      'Srinivas'
+      'Remember Meds',
+      'Track Nums',
+      'Capture provider Q&A'
     ];
 
     $scope.awesomeThingsCount = function() {

@@ -3,16 +3,12 @@
 	<h3>Track all your medications.</h3>
 </div>
 
-<form ng-submit="addMed()">
-	<input type="text" ng-model="newMed"  size="30" placeholder="add new med here">
- 	<input class="btn" type="submit" value="add">
+<form class="form-inline" ng-submit="addMed()">
+	<h4>New Medication</h4>
+	<input type="text" class="input-large" ng-model="newMedName" placeholder="medication name" autofocus required>
+	<input type="text" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required>
+	<button class="btn" type="submit">add</button>
 </form>
-
-<ul class="unstyled">
-	<li ng-repeat="med in medNames">	
-		<h3 class="label">{{ med }}</h3>
-	</li>
-</ul>
 
 <br>
 
@@ -21,11 +17,24 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Quantity in ml/mg</th>
     </tr>
   </thead>
-  <tbody>
-    <tr ng-repeat="med in medNames">
-      <td>{{ med }}</td>     
+  <tbody >
+    <tr ng-class="{editing: med == editedMedNames}" ng-repeat="med in medNames">
+      <td>
+      	<label class="view">{{ med.name }}</label>
+      	<input class="edit input-small" ng-model="med.name">
+      </td>
+      <td>
+      	<label class="view">{{ med.qty }}</label>
+      	<input class="edit input-small" ng-model="med.qty">
+      </td>
+      <td>
+      	<button class="view btn" ng-click="editMed(med)">edit</button>
+      	<button class="edit btn" ng-click="saveMed(med)">save</button>
+      	<button class="btn" ng-click="removeMed(med)">delete</button>
+      </td>
     </tr>
   </tbody>
 </table>
