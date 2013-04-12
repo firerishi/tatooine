@@ -6,7 +6,7 @@
 <form class="form-inline" ng-submit="addMed()">
 	<h4>New Medication</h4>
 	<input type="text" class="input-large" ng-model="newMedName" placeholder="medication name" autofocus required>
-	<input type="text" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required>
+	<input type="number" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required >
 	<button class="btn" type="submit">add</button>
 </form>
 
@@ -25,13 +25,13 @@
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.name }}</label>
           <form ng-submit="saveMed(med)" class="form-inline" >
-            <input class="edit" ng-model="med.name">
+            <input type="text" class="edit" ng-model="med.name">
           </form>
       </td>
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.qty }}</label>
           <form ng-submit="saveMed(med)" class="form-inline" >
-      	<input class="edit input-small" ng-model="med.qty">
+      	<input type="number" class="edit input-small" ng-model="med.qty" >
           </form>
       </td>
       <td>
