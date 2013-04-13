@@ -14,6 +14,23 @@
 
 <table class="table table-hover">
   <h4>Medication List</h4>
+  
+  <button class="btn" ng-click="open()">Add</button>
+  <div modal="shouldBeOpen" close="close()" options="opts">
+    <div class="modal-header">
+      <h4>Add New Medication</h4>
+    </div>    
+    <div class="modal-body">
+      <input type="text" class="input-large" ng-model="newMedName" placeholder="medication name" autofocus required>
+      <input type="number" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required >   
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-info" type="submit" ng-click="addMed()">Save</button>
+      <button class="btn btn-warning cancel" ng-click="close()">Close</button>
+    </div>
+  </div> 
+
+  <!-- Medication List table -->
   <thead>
     <tr>
       <th>Name</th>
@@ -24,23 +41,24 @@
     <tr ng-class="{editing: med == editedMedNames}" ng-repeat="med in medNames">
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.name }}</label>
-          <form ng-submit="saveMed(med)" class="form-inline" >
-            <input type="text" class="edit" ng-model="med.name">
-          </form>
+        <form ng-submit="saveMed(med)" class="form-inline" >
+          <input type="text" class="edit" ng-model="med.name">
+        </form>
       </td>
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.qty }}</label>
-          <form ng-submit="saveMed(med)" class="form-inline" >
-      	<input type="number" class="edit input-small" ng-model="med.qty" >
-          </form>
-      </td>
-      <td>
-      	<!-- <button class="view btn" ng-click="editMed(med)">edit</button> -->
-      	<!-- <button class="edit btn" ng-click="saveMed(med)">save</button> -->
-      	<button class="view destroy" ng-click="removeMed(med)">x</button>
-      </td>
-    </tr>
-  </tbody>
+        <form ng-submit="saveMed(med)" class="form-inline" >
+         <input type="number" class="edit input-small" ng-model="med.qty" >
+       </form>
+     </td>
+     <td>
+       <!-- <button class="view btn" ng-click="editMed(med)">edit</button> -->
+       <!-- <button class="edit btn" ng-click="saveMed(med)">save</button> -->
+       <button class="view destroy" ng-click="removeMed(med)">x</button>
+     </td>
+   </tr>
+ </tbody>
 </table>
 
+<br><br><br><br><br><br><br>
 <a class="btn btn-large" href="#/">goto Home</a>

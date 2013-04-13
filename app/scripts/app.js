@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tatooineApp', [])
+angular.module('tatooineApp', ['ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
