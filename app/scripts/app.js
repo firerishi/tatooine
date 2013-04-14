@@ -11,6 +11,10 @@ angular.module('tatooineApp', ['ui.bootstrap'])
         templateUrl: 'views/meds.html',
         controller: 'MedsCtrl'
       })
+      .when('/notes', {
+        templateUrl: 'views/notes.html',
+        controller: 'NotesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
