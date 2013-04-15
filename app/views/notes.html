@@ -3,11 +3,38 @@
 	<h3>Store all your notes from health care provider visits.</h3>
 </div>
 
-<form class="form-inline" ng-submit="addMed()">
+<form class="form-inline" ng-submit="addNote()">
 	<h4>New Note</h4>
-	<input type="text" class="input-large" placeholder="question" autofocus required>
+	<input type="text" class="input-large" ng-model="newQuestionName" placeholder="question" autofocus required>
 	<button class="btn" type="submit">add</button>
 </form>
+
+<br><br><br>
+
+<table class="table table-hover">
+  <h4>Notes List</h4>
+  <!-- Medication List table -->
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr ng-repeat="note in notesList">
+      <td>
+      	<label>{{ note.question }}</label>
+      </td>
+      <td>
+      	<label>{{ note.answer }}</label>
+     </td>
+     <td>
+       <button class="destroy" ng-click="removeNote(note)">x</button>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
 
 <br><br><br><br><br><br><br>
 <a class="btn btn-large" href="#/">goto Home</a>
