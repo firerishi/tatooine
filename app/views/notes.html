@@ -23,7 +23,10 @@
 	<tbody >
 		<tr ng-repeat="note in notesList" ng-class="{editing: note == editedNotes}">
 			<td>
-				<label>{{ note.question }}</label>
+				<label class="view" ng-click="editNote(note)">{{ note.question }}</label>
+				<form ng-submit="saveNote(note)" class="form-inline" >
+					<input type="text" class="edit" ng-model="note.question" required>
+				</form>
 			</td>
 			<td>
 				<label class="view" ng-show="note.answer" ng-click="editNote(note)">{{ note.answer }}</label>
