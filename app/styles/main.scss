@@ -9,7 +9,7 @@ tr {
 		display: normal;
 		position: absolute;
 	}
-	button.destroy {
+	button.destroy, button.add-note-answer {
 		display: none;
 		position: absolute;
 		background: none;
@@ -22,7 +22,11 @@ tr {
 		-o-transition: all 0.2s;
 		transition: all 0.2s;			
 	}
-	button.destroy:hover {
+	button.add-note-answer {
+		display: block;
+	}
+	button.destroy:hover,
+	button.add-note-answer:hover {
 		text-shadow: 0 0 1px #000, 0 0 10px rgba(199, 107, 107, 0.8);
 		-webkit-transform: scale(1.3);
 		-moz-transform: scale(1.3);
@@ -43,4 +47,5 @@ tr.editing {
 	.view {
 		display:none;
 	}	
+	height: 3.2em;
 }

@@ -12,27 +12,31 @@
 <br><br><br>
 
 <table class="table table-hover">
-  <h4>Notes List</h4>
-  <!-- Medication List table -->
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-    </tr>
-  </thead>
-  <tbody >
-    <tr ng-repeat="note in notesList">
-      <td>
-      	<label>{{ note.question }}</label>
-      </td>
-      <td>
-      	<label>{{ note.answer }}</label>
-     </td>
-     <td>
-       <button class="destroy" ng-click="removeNote(note)">x</button>
-     </td>
-   </tr>
- </tbody>
+	<h4>Notes List</h4>
+	<!-- Medication List table -->
+	<thead>
+		<tr>
+			<th>Question</th>
+			<th>Answer</th>
+		</tr>
+	</thead>
+	<tbody >
+		<tr ng-repeat="note in notesList" ng-class="{editing: note == editedNotes}">
+			<td>
+				<label>{{ note.question }}</label>
+			</td>
+			<td>
+				<label class="view" ng-show="note.answer" ng-click="editNote(note)">{{ note.answer }}</label>
+				<button class="view add-note-answer" ng-hide="note.answer" ng-click="editNote(note)">+</button>
+				<form ng-submit="saveNote(note)" class="form-inline" >
+					<input type="text" class="edit" ng-model="note.answer" required>
+				</form>
+			</td>
+			<td>
+				<button class="destroy" ng-click="removeNote(note)">x</button>
+			</td>
+		</tr>
+	</tbody>
 </table>
 
 

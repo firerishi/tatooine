@@ -42,13 +42,13 @@
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.name }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
-          <input type="text" class="edit" ng-model="med.name">
+          <input type="text" class="edit" ng-model="med.name" required>
         </form>
       </td>
       <td>
       	<label ng-click="editMed(med)" class="view">{{ med.qty }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
-         <input type="number" class="edit input-small" ng-model="med.qty" >
+         <input type="number" class="edit input-small" ng-model="med.qty" required>
        </form>
      </td>
      <td>
