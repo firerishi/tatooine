@@ -6,8 +6,8 @@ angular.module('tatooineApp')
 	$scope.editedNotes = null;
 
 	$scope.notesList = [
-		{ question:'Whats is X?', answer:'none'},
-		{ question:'Whats is Y?', answer:'none'},
+		{ question:'Whats is X?', answer:''},
+		{ question:'Whats is Y?', answer:''},
 	];
 
 	$scope.addNote = function() {
