@@ -40,16 +40,6 @@ tr:hover button.destroy {
 	display: inline-block;
 }
 
-div {
-	input.edit {
-		display: none;
-	}
-	.view {
-		display: normal;
-	}
-}
-
-div.editing,
 tr.editing {
 	.edit {
 		display:inline-table;
@@ -59,6 +49,29 @@ tr.editing {
 	}	
 	height: 3.2em;
 }
+
+
+
+div#number-sections {
+	input.edit {
+		display: none;
+	}
+	h1.view {
+		display: normal;
+	}
+}
+div#number-sections.editing {
+	input.edit {
+		display:inline-table;
+		font-size: 3em;
+		height: 2em;
+	}
+	h1.view {
+		display:none;
+	}	
+}
+
+
 
 #number-sections {
 	text-align: center;

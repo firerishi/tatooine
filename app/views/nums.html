@@ -3,11 +3,11 @@
 	<h3>Remember them after each visit.</h3>
 </div>
 
-<div id="number-sections" class="row">
-  <div class="span4" ng-class="{editing: nums == editedNums}">
+<div id="number-sections" class="row" ng-class="{editing: nums == editedNums}">
+  <div class="span4" >
   	<h1 class="view" ng-click="editNums(nums)">{{ nums.weight }}</h1>
-  	<form class="form-inline" >
-		<input type="text" class="input-mini edit" ng-model="nums.weight" required>
+  	<form ng-submit="saveNums(nums)" class="form-inline" >
+		<input type="number" class="input-small edit" ng-model="nums.weight" required autofocus>
 	</form>
   	<span>lbs</span>
   	<h4>Weight</h4>
