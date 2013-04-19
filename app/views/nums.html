@@ -1,0 +1,28 @@
+<div class="hero-unit">
+	<h1>Numbers</h1>
+	<h3>Remember them after each visit.</h3>
+</div>
+
+<div id="number-sections" class="row">
+  <div class="span4" ng-class="{editing: nums == editedNums}">
+  	<h1 class="view" ng-click="editNums(nums)">{{ nums.weight }}</h1>
+  	<form class="form-inline" >
+		<input type="text" class="input-mini edit" ng-model="nums.weight" required>
+	</form>
+  	<span>lbs</span>
+  	<h4>Weight</h4>
+  </div>
+  <div class="span4">
+	<h1>{{ nums.heightFeet }}</h1><span>feet</span>
+	<h1>{{ nums.heightInches }}</h1><span>inches</span>
+	<h4>Height</h4>
+  </div>
+  <div class="span4">
+  	<h1>{{ nums.waist }}</h1><span>inches</span>
+  	<h4>Waist</h4>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+<a class="btn btn-large" href="#/">goto Home</a>
