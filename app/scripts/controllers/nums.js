@@ -12,12 +12,15 @@ angular.module('tatooineApp')
 		waist:31
 	};
 
-	$scope.editNums = function (nums) {
-		$scope.editedNums = nums;
+	$scope.editNums = function (numType) {
+		
+		$scope.editedNums = numType;
+		console.log($scope.editedNums);
 	};
 
 	$scope.saveNums = function (nums) {
 		$scope.editedNums = null;
+		console.log("save ", nums);
 	}
 
 	

@@ -60,7 +60,7 @@ div#number-sections {
 		display: normal;
 	}
 }
-div#number-sections.editing {
+div#number-sections .editing {
 	input.edit {
 		display:inline-table;
 		font-size: 3em;
@@ -75,7 +75,7 @@ div#number-sections.editing {
 
 #number-sections {
 	text-align: center;
-	h1 {
+	h1, input, form {
 		display: inline-block;
 	}
 }
