@@ -4,13 +4,17 @@
 </div>
 
 <div id="number-sections" class="row" >
+  
+  <span class="span12"><hr><h5>PROPORTIONS</h5><hr></span>
+
+
   <div class="span4" ng-class="{editing: 'weight' == editedNums}">
   	<h1 class="view" ng-click="editNums('weight')">{{ nums.weight }}</h1>
   	<form ng-submit="saveNums(nums)" class="form-inline" >
       <input type="number" class="input-small edit" ng-model="nums.weight" required>
     </form>
-    <span>lbs</span>
-    <h4>Weight</h4>
+    <span>lbs</span><br>
+    <span class="label">Weight</span>
   </div>
 
   <div class="span4" ng-class="{editing: 'height' == editedNums}">
@@ -23,8 +27,8 @@
   <form ng-submit="saveNums(nums)" class="form-inline" >
     <input type="number" class="input-small edit" ng-model="nums.heightInches" required>
   </form>
-  <span>inches</span>
-  <h4>Height</h4>
+  <span>inches</span><br>
+    <span class="label">Height</span>
 </div>
 
 <div class="span4" ng-class="{editing: 'waist' == editedNums}">
@@ -32,11 +36,51 @@
   <form ng-submit="saveNums(nums)" class="form-inline" >
     <input type="number" class="input-small edit" ng-model="nums.waist" required>
   </form>
-  <span>inches</span>
-  <h4>Waist</h4>
-</div>
+  <span>inches</span><br>
+    <span class="label">Waist</span>
 </div>
 
+
+
+<span class="span12"><hr><h5>VITALS</h5><hr></span>
+
+<div class="span4" ng-class="{editing: 'pulse' == editedNums}">
+    <h1 class="view" ng-click="editNums('pulse')">{{ nums.pulse }}</h1>
+    <form ng-submit="saveNums(nums)" class="form-inline" >
+      <input type="number" class="input-small edit" ng-model="nums.pulse" required>
+    </form>
+    <span>bpm</span><br>
+    <span class="label">Pulse</span>
+  </div>
+
+  <div class="span4" ng-class="{editing: 'bp' == editedNums}">
+   <h1 class="view" ng-click="editNums('bp')">{{ nums.bpSys }}</h1>
+   <form ng-submit="saveNums(nums)" class="form-inline" >
+    <input type="number" class="input-small edit" ng-model="nums.bpSys" required>
+  </form>
+  <span>sys</span>
+  <h1 class="view" ng-click="editNums('bp')">{{ nums.bpDia }}</h1>
+  <form ng-submit="saveNums(bp)" class="form-inline" >
+    <input type="number" class="input-small edit" ng-model="nums.bpDia" required>
+  </form>
+  <span>dia</span><br>
+    <span class="label">Blood Pressure</span>
+</div>
+
+
+
+<span class="span12"><hr><h5>LABS</h5><hr></span>
+
+<div class="span4" ng-class="{editing: 'glucose' == editedNums}">
+    <h1 class="view" ng-click="editNums('glucose')">{{ nums.glucose }}</h1>
+    <form ng-submit="saveNums(nums)" class="form-inline" >
+      <input type="number" class="input-small edit" ng-model="nums.glucose" required>
+    </form>
+    <span>non-fasting</span><br>
+    <span class="label">Glucose</span>
+  </div>
+
+</div>
 
 <br><br><br><br><br><br><br>
 <a class="btn btn-large" href="#/">goto Home</a>
