@@ -4,6 +4,20 @@
 	background: #aa6c63;
 	border-radius: 0px;
 }
+.navbar {
+	.brand {
+		color: white;
+		text-shadow: none;
+	}
+	.nav {
+		li { 
+			a {
+				color: white;
+				text-shadow: none;
+			}
+		}
+	}
+}
 
 tr {
 	.edit {
