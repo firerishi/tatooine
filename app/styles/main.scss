@@ -1,5 +1,10 @@
 @import "compass_twitter_bootstrap";
 
+.navbar-inner {
+	background: #aa6c63;
+	border-radius: 0px;
+}
+
 tr {
 	.edit {
 		display: none;
