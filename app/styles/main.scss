@@ -1,19 +1,56 @@
 @import "compass_twitter_bootstrap";
 
+body, html {
+	font-size: 14px;
+}
+
 /* 
 FONTS
 */
 
 @font-face {
     font-family: 'lobster_tworegular';
-    src: url('fonts/lobstertwo-regular-webfont.eot');
-    src: url('fonts/lobstertwo-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/lobstertwo-regular-webfont.woff') format('woff'),
-         url('fonts/lobstertwo-regular-webfont.ttf') format('truetype'),
-         url('fonts/lobstertwo-regular-webfont.svg#lobster_tworegular') format('svg');
+    src: url('fonts/lobstertwo_web/lobstertwo-regular-webfont.eot');
+    src: url('fonts/lobstertwo_web/lobstertwo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lobstertwo_web/lobstertwo-regular-webfont.woff') format('woff'),
+         url('fonts/lobstertwo_web/lobstertwo-regular-webfont.ttf') format('truetype'),
+         url('fonts/lobstertwo_web/lobstertwo-regular-webfont.svg#lobster_tworegular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('fonts/source_sans_pro_web/sourcesanspro-regular-webfont.eot');
+    src: url('fonts/source_sans_pro_web/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/source_sans_pro_web/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('fonts/source_sans_pro_web/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('fonts/source_sans_pro_web/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('fonts/open_sans_condensed_web/opensans-condlight-webfont.eot');
+    src: url('fonts/open_sans_condensed_web/opensans-condlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open_sans_condensed_web/opensans-condlight-webfont.woff') format('woff'),
+         url('fonts/open_sans_condensed_web/opensans-condlight-webfont.ttf') format('truetype'),
+         url('fonts/open_sans_condensed_web/opensans-condlight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sciflysans';
+    src: url('fonts/scifly_web/scifly-sans-webfont.eot');
+    src: url('fonts/scifly_web/scifly-sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/scifly_web/scifly-sans-webfont.woff') format('woff'),
+         url('fonts/scifly_web/scifly-sans-webfont.ttf') format('truetype'),
+         url('fonts/scifly_web/scifly-sans-webfont.svg#sciflysans') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 
@@ -24,12 +61,18 @@ NAV
 	background: #aa6c63;
 	border-radius: 0px;
 	border: 0px;
+	min-height: 50px;
+	border-bottom: 10px solid #ccc;
 }
 .navbar {
 	margin-bottom: 0;
 	.brand {
 		color: white;
 		text-shadow: none;
+		font-family: 'sciflysans';
+		font-size: 1.7em;
+		margin-left: 2%;
+		margin-top: 5px;
 	}
 	.nav {
 		li { 
@@ -44,16 +87,20 @@ NAV
 .left-nav {
 	background: #333;
 	height: 100%;
+	width: 20%;
 	position: fixed;
-	border-right: 10px solid #ddd;
+	border-right: 10px solid #555;
 	ul {
 		margin-left: 0px;
 		li {
 			text-align: center;
 			a {
-				color: #fefefe;
+				color: #efefef;
 				display: block;
 				padding: 30px 0px;
+				font-style: normal;
+				font-family: 'source_sans_proregular';
+				font-size: 1.2em;
 			}
 			a:hover {
 				color: orange;
@@ -66,15 +113,25 @@ NAV
 #profile-spot {
 	// background: url('../images/photo_small.jpg') no-repeat center;
 	border-bottom: 5px solid #5b9ea2;
-	h1 {
-		color: #999;
+	color: #999;
+	h1 {		
 		font-family: 'lobster_tworegular';
-		display: inline-block;
 		font-size: 1.3em;
 		font-style: italic;
+		display: inline-block;
+		margin-left: 3%;
 	}
 }
 
+.brand {
+	font-style: bold;
+}
+
+
+.right-side {
+	position: relative;
+	width: 80%;
+}
 
 /* 
 TABLE ROWS 

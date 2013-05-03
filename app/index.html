@@ -22,8 +22,42 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">hlth</a>
+      <ul class="nav pull-right">
+        <li><a href="#"><i class="icon-star"></i>logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <section class="left-nav">
+      <header id="profile-spot">
+        <img src="../images/photo_small.jpg" height="100" width="100" />
+        <h1>Thirumalaa Srinivas</h1>
+      </header>
+      <nav >
+       <ul >
+        <li>
+         <a href="#/nums">Nums</a>
+       </li>
+       <li>
+         <a href="#/meds">Meds</a>
+       </li>
+       <li>
+         <a href="#/notes">Notes</a>
+       </li>
+     </ul>
+   </nav>
+ </section>
+
     <!-- Add your site or application content here -->
-    <div class="" ng-view></div>
+    <section class="right-side  span8 pull-right" ng-view>
+    
+    </section>
+    </div>
 
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>

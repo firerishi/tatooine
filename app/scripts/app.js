@@ -4,8 +4,8 @@ angular.module('tatooineApp', ['ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/nums.html',
+        controller: 'NumsCtrl'
       })
       .when('/meds', {
         templateUrl: 'views/meds.html',
@@ -20,6 +20,6 @@ angular.module('tatooineApp', ['ui.bootstrap'])
         controller: 'NumsCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/nums'
       });
   });
