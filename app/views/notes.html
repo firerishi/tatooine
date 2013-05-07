@@ -1,23 +1,23 @@
-<div class="hero-unit">
+<div class="hero-unit feature-heads">
 	<h1>Notes</h1>
 	<h3>Store all your notes from health care provider visits.</h3>
 </div>
 
-<form class="form-inline" ng-submit="addNote()">
-	<h4>New Note</h4>
+<!-- <form class="form-inline" ng-submit="addNote()">
 	<input type="text" class="input-large" ng-model="newQuestionName" placeholder="question" autofocus required>
 	<button class="btn" type="submit">add</button>
-</form>
+</form> -->
 
-<br><br><br>
-
-<table class="table table-hover">
-	<h4>Notes List</h4>
-	<!-- Medication List table -->
+<section class="action-bar">
+	<button class="btn" type="submit">add</button>
+</section>
+<table class="table table-hover notes-table">
+	<!-- Notes List table -->
 	<thead>
 		<tr>
-			<th>Question</th>
-			<th>Answer</th>
+			<th>QUESTION</th>
+			<th>ANSWER</th>
+			<th>&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody >

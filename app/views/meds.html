@@ -1,10 +1,9 @@
-<div class="hero-unit">
+<div class="hero-unit feature-heads">
 	<h1>Medications</h1>
 	<h3>Track all your medications.</h3>
 </div>
 
 <form class="form-inline" ng-submit="addMed()">
-	<h4>New Medication</h4>
 	<input type="text" class="input-large" ng-model="newMedName" placeholder="medication name" autofocus required>
 	<input type="number" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required >
 	<button class="btn" type="submit">add</button>
@@ -12,8 +11,7 @@
 
 <br>
 
-<table class="table table-hover">
-  <h4>Medication List</h4>
+<table class="table table-hover meds-table">
   
   <button class="btn" ng-click="open()">Add</button>
   <div modal="shouldBeOpen" close="close()" options="opts">
@@ -33,8 +31,9 @@
   <!-- Medication List table -->
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Quantity in ml/mg</th>
+      <th>NAME</th>
+      <th>QTY in ml/mg</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody >
