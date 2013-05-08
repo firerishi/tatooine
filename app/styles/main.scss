@@ -77,11 +77,19 @@ FONTS
 }
 
 /* 
+COLORS
+*/
+$brandcolor-masthead: #AA6C63;
+$brandcolor-navlinks: #D49B92;
+$actionbar-green: #93BEA0;
+$actionbar-btn: #805D58;
+
+/* 
 NAV
 */
 
 .navbar-inner {
-	background: #aa6c63;
+	background: $brandcolor-masthead;
 	border-radius: 0px;
 	border: 0px;
 	min-height: 50px;
@@ -112,7 +120,7 @@ NAV
 	height: 100%;
 	width: 20%;
 	position: fixed;
-	border-right: 10px solid #555;
+	border-right: 4px solid #555;
 	ul {
 		margin-left: 0px;
 		li {
@@ -126,7 +134,7 @@ NAV
 				font-size: 1.2em;
 			}
 			a:hover {
-				color: orange;
+				color: $brandcolor-navlinks;
 				background: #222;
 			}
 		}
@@ -135,7 +143,7 @@ NAV
 
 #profile-spot {
 	// background: url('../images/photo_small.jpg') no-repeat center;
-	border-bottom: 5px solid #5b9ea2;
+	border-bottom: 5px solid #497E59;
 	color: #999;
 	h1 {		
 		font-family: 'lobster_tworegular';
@@ -154,6 +162,7 @@ NAV
 .right-side {
 	position: relative;
 	width: 80%;
+	margin-left: 0px;
 }
 
 /* 
@@ -180,22 +189,36 @@ HERO UNITS
 COMMON STYLED
 */
 .action-bar {
-	background-color: #a4bcbc;
+	background-color: $actionbar-green;//#a4bcbc;
 	padding: 5px;
-	margin-left: 0.6%;
+	padding-left: 2%;
+	button {
+		background: $actionbar-btn;
+		border-radius: 0px;
+		color: #efefef;
+		text-shadow: none;
+		border: none;
+		line-height: 30px;
+	}
 }
+
 
 .meds-table,
 .notes-table {
-	margin-left: 0.6%;
 	font-family: 'open_sansregular';
 	thead {
 		background-color: #888;
 		color: #ddd;
+		th {
+			padding-left: 2%;
+		}	
 	}
 	tbody {
 		background-color: #efefef;
 		color: #666;
+		td {
+			padding-left: 2%;
+		}
 	}
 }
 

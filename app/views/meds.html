@@ -3,17 +3,18 @@
 	<h3>Track all your medications.</h3>
 </div>
 
-<form class="form-inline" ng-submit="addMed()">
+<!-- <form class="form-inline" ng-submit="addMed()">
 	<input type="text" class="input-large" ng-model="newMedName" placeholder="medication name" autofocus required>
 	<input type="number" class="input-small" ng-model="newMedQty" placeholder="qty in ml/mg" required >
 	<button class="btn" type="submit">add</button>
-</form>
+</form> -->
 
-<br>
+
+<section class="action-bar">
+  <button class="btn" ng-click="open()">Add</button>
+</section>
 
 <table class="table table-hover meds-table">
-  
-  <button class="btn" ng-click="open()">Add</button>
   <div modal="shouldBeOpen" close="close()" options="opts">
     <div class="modal-header">
       <h4>Add New Medication</h4>
