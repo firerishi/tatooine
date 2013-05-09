@@ -34,6 +34,9 @@
     <tr>
       <th>NAME</th>
       <th>QTY in ml/mg</th>
+      <th>FREQUENCY</th>
+      <th>TYPE</th>
+      <th>METHOD</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -49,6 +52,24 @@
       	<label ng-click="editMed(med)" class="view">{{ med.qty }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
          <input type="number" class="edit input-small" ng-model="med.qty" required>
+       </form>
+     </td>
+     <td>
+        <label ng-click="editMed(med)" class="view">{{ med.frequency }}</label>
+        <form ng-submit="saveMed(med)" class="form-inline" >
+         <input type="number" class="edit input-small" ng-model="med.frequency" required>
+       </form>
+     </td>
+     <td>
+        <label ng-click="editMed(med)" class="view">{{ med.type }}</label>
+        <form ng-submit="saveMed(med)" class="form-inline" >
+         <input type="number" class="edit input-small" ng-model="med.type" required>
+       </form>
+     </td>
+     <td>
+        <label ng-click="editMed(med)" class="view">{{ med.method }}</label>
+        <form ng-submit="saveMed(med)" class="form-inline" >
+         <input type="number" class="edit input-small" ng-model="med.method" required>
        </form>
      </td>
      <td>

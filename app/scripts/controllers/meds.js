@@ -7,9 +7,9 @@ angular.module('tatooineApp')
 	$scope.shouldBeOpen = false;
 
 	$scope.medNames = [
-	{ name:'Advil', qty:30},
-	{ name:'Coldarin', qty:40 },
-	{ name:'Gelusil', qty:20 }
+	{ name:'Advil', qty:30, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Coldarin', qty:40, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Gelusil', qty:20, frequency: 'Daily', type: 'Pill', method: 'oral' }
 	];
 
 	$scope.addMed = function() {
