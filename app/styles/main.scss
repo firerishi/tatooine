@@ -220,8 +220,46 @@ COMMON STYLED
 			padding-left: 2%;
 		}
 	}
+	form input {
+		border-radius: 0px;
+	}
 }
 
+
+
+form.add-form {
+	display: none;
+	background: #ddd;
+	padding: 20px;
+	input {
+		border-radius: 0px;
+		height: 2em;
+		display: block;
+		margin-bottom: 20px;
+		font-family: 'open_sansregular';
+	}
+	input::-webkit-input-placeholder { /* WebKit browsers */
+	    color:  #ccc;
+	}
+	button {
+		background: #72993B;
+		border-radius: 0px;
+		color: #efefef;
+		text-shadow: none;
+		border: none;
+		line-height: 30px;
+	}
+	button:hover {
+		background: #768F7E;
+		color: #efefef;
+	}
+}
+form.add-mode {
+	display: block;
+}
+table.add-mode {
+	display: none;
+}	
 
 /* 
 TABLE ROWS 

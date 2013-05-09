@@ -11,7 +11,7 @@ angular.module('tatooineApp')
 	];
 
 	$scope.addNote = function() {
-		$scope.notesList.push({ question:$scope.newQuestionName, answer:'' });
+		$scope.notesList.push({ question:$scope.newQuestionName, answer:$scope.newAnswerName });
 		$scope.newQuestionName = "";
 		$scope.newAnswerName = "";
 	}
