@@ -13,8 +13,9 @@
 </section>
 <form class="form-inline add-form" ng-submit="addNote()" ng-class="addMode">
 	<input type="text" class="input-large" ng-model="newQuestionName" placeholder="Question text" autofocus required>
-	<input type="text" class="input-xxlarge" ng-model="newAnswerName" placeholder="Answer text" required>
-	<button class="btn" type="submit" ng-click="addMode=''">Save</button>
+	<input type="text" class="input-xxlarge" ng-model="newAnswerName" placeholder="Answer text">
+	<button class="btn save" type="submit" ng-click="addMode=''">Save</button>
+	<button class="btn cancel" type="reset" ng-click="addMode=''">Cancel</button>
 </form>
 <table class="table table-hover notes-table" ng-class="addMode">
 	<!-- Notes List table -->

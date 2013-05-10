@@ -120,7 +120,7 @@ NAV
 	height: 100%;
 	width: 20%;
 	position: fixed;
-	border-right: 4px solid #555;
+	// border-right: 4px solid #555;
 	ul {
 		margin-left: 0px;
 		li {
@@ -241,7 +241,10 @@ form.add-form {
 	input::-webkit-input-placeholder { /* WebKit browsers */
 	    color:  #ccc;
 	}
-	button {
+	input.inline-jux {
+		display: inline-block;
+	}
+	button.save {
 		background: #72993B;
 		border-radius: 0px;
 		color: #efefef;
@@ -249,8 +252,20 @@ form.add-form {
 		border: none;
 		line-height: 30px;
 	}
-	button:hover {
+	button.save:hover {
 		background: #768F7E;
+		color: #efefef;
+	}
+	button.cancel {
+		background: #555;
+		border-radius: 0px;
+		color: #efefef;
+		text-shadow: none;
+		border: none;
+		line-height: 30px;
+	}
+	button.cancel:hover {
+		background: #777;
 		color: #efefef;
 	}
 }
@@ -260,6 +275,17 @@ form.add-mode {
 table.add-mode {
 	display: none;
 }	
+
+/*
+FONT CLASSES
+*/
+.lobster_font {
+	font-family: 'lobster_tworegular';
+}
+.opensans_cndsd_font {
+	font-family: 'open_sanscondensed_light';
+}
+
 
 /* 
 TABLE ROWS 

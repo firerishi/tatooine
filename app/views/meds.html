@@ -11,11 +11,20 @@
 
 
 <section class="action-bar">
-  <button class="btn" ng-click="open()">Add</button>
+  <button class="btn" ng-click="addMode='add-mode'">Add</button>
 </section>
+<form class="form-inline add-form" ng-submit="addMed()" ng-class="addMode">
+    <input type="text" class="input-large" ng-model="newMedName" placeholder="Enter Name" autofocus required>
+    <input type="number" class="input-medium" ng-model="newMedQty" placeholder="Enter Qty in ml/mg" required>
+    <input type="text" class="input-large inline-jux" ng-model="newMedFreq" placeholder="Enter Frequency" required>
+    <input type="text" class="input-medium inline-jux" ng-model="newMedType" placeholder="Enter Type" required>
+    <input type="text" class="input-medium" ng-model="newMedMthd" placeholder="Enter Method" required>
+    <button class="btn save" type="submit" ng-click="addMode=''">Save</button>
+    <button class="btn cancel" type="reset" ng-click="addMode=''">Cancel</button>
+</form>
 
-<table class="table table-hover meds-table">
-  <div modal="shouldBeOpen" close="close()" options="opts">
+<table class="table table-hover meds-table" ng-class="addMode">
+  <!-- <div modal="shouldBeOpen" close="close()" options="opts">
     <div class="modal-header">
       <h4>Add New Medication</h4>
     </div>    
@@ -27,7 +36,7 @@
       <button class="btn btn-info" type="submit" ng-click="addMed()">Save</button>
       <button class="btn btn-warning cancel" ng-click="close()">Close</button>
     </div>
-  </div> 
+  </div>  -->
 
   <!-- Medication List table -->
   <thead>
@@ -54,22 +63,22 @@
          <input type="number" class="edit input-small" ng-model="med.qty" required>
        </form>
      </td>
-     <td>
+     <td class="lobster_font">
         <label ng-click="editMed(med)" class="view">{{ med.frequency }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
-         <input type="number" class="edit input-small" ng-model="med.frequency" required>
+         <input class="edit input-small" ng-model="med.frequency" required>
        </form>
      </td>
-     <td>
+     <td class="opensans_cndsd_font">
         <label ng-click="editMed(med)" class="view">{{ med.type }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
-         <input type="number" class="edit input-small" ng-model="med.type" required>
+         <input class="edit input-small" ng-model="med.type" required>
        </form>
      </td>
      <td>
         <label ng-click="editMed(med)" class="view">{{ med.method }}</label>
         <form ng-submit="saveMed(med)" class="form-inline" >
-         <input type="number" class="edit input-small" ng-model="med.method" required>
+         <input class="edit input-small" ng-model="med.method" required>
        </form>
      </td>
      <td>

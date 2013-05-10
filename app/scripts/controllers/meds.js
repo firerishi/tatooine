@@ -9,13 +9,31 @@ angular.module('tatooineApp')
 	$scope.medNames = [
 	{ name:'Advil', qty:30, frequency: 'Daily', type: 'Pill', method: 'oral' },
 	{ name:'Coldarin', qty:40, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Gelusil', qty:20, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Advil', qty:30, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Coldarin', qty:40, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Gelusil', qty:20, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Advil', qty:30, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Coldarin', qty:40, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Gelusil', qty:20, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Advil', qty:30, frequency: 'Daily', type: 'Pill', method: 'oral' },
+	{ name:'Coldarin', qty:40, frequency: 'Daily', type: 'Pill', method: 'oral' },
 	{ name:'Gelusil', qty:20, frequency: 'Daily', type: 'Pill', method: 'oral' }
 	];
 
 	$scope.addMed = function() {
-		$scope.medNames.push({ name:$scope.newMedName, qty:$scope.newMedQty });
+		$scope.medNames.push ({ 
+			name:$scope.newMedName, 
+			qty:$scope.newMedQty, 
+			frequency:$scope.newMedFreq, 
+			type:$scope.newMedType,
+			method:$scope.newMedMthd 
+		});
 		$scope.newMedName = "";
 		$scope.newMedQty = "";
+		$scope.newMedFreq = "";
+		$scope.newMedType = "";
+		$scope.newMedMthd = "";
 	}
 
 	$scope.editMed = function (med) {
