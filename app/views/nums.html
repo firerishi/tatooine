@@ -1,6 +1,6 @@
 <div class="hero-unit feature-heads">
-	<h1>Numbers</h1>
-	<h3>Remember them after each visit.</h3>
+	<h1>Vitals</h1>
+	<h3>Remember your numbers after each visit.</h3>
 </div>
 
   <section class="action-bar">
@@ -10,8 +10,6 @@
 
 <div id="number-sections" class="row" >
   
-
-  <span class="span12"><hr><h5>PROPORTIONS</h5><hr></span>
 
 
   <div class="span4" ng-class="{editing: 'weight' == editedNums}">
@@ -47,9 +45,6 @@
 </div>
 
 
-
-<span class="span12"><hr><h5>VITALS</h5><hr></span>
-
 <div class="span4" ng-class="{editing: 'pulse' == editedNums}">
     <h1 class="view" ng-click="editNums('pulse')">{{ nums.pulse }}</h1>
     <form ng-submit="saveNums(nums)" class="form-inline" >
@@ -72,18 +67,5 @@
   <span>dia</span><br>
     <span class="label">Blood Pressure</span>
 </div>
-
-
-
-<span class="span12"><hr><h5>LABS</h5><hr></span>
-
-<div class="span4" ng-class="{editing: 'glucose' == editedNums}">
-    <h1 class="view" ng-click="editNums('glucose')">{{ nums.glucose }}</h1>
-    <form ng-submit="saveNums(nums)" class="form-inline" >
-      <input type="number" class="input-small edit" ng-model="nums.glucose" required>
-    </form>
-    <span>non-fasting</span><br>
-    <span class="label">Glucose</span>
-  </div>
 
 </div>
